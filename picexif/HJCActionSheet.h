@@ -1,13 +1,36 @@
 //
 //  HJCActionSheet.h
-//  picexif
+//  wash
 //
-//  Created by Simon on 05/11/2016.
-//  Copyright © 2016 Simon. All rights reserved.
+//  Created by weixikeji on 15/5/11.
+//
 //
 
 #import <UIKit/UIKit.h>
 
+@class HJCActionSheet;
+
+@protocol HJCActionSheetDelegate <NSObject>
+
+@optional
+
+/** *   buttonIndex 从上到下(1开始) 依次递增*/
+- (void)actionSheet:(HJCActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex;
+
+@end
+
 @interface HJCActionSheet : UIView
+
+//@property (nonatomic, copy) NSString *title;
+@property (nonatomic, weak) id <HJCActionSheetDelegate> delegate;
+
+/*** init HJCActionSheet */
+- (instancetype)initWithTitle:(NSString *)title
+                     delegate:(id<HJCActionSheetDelegate>)delegate
+            cancelButtonTitle:(NSString *)cancelButtonTitle
+            otherButtonTitles:(NSArray<NSString *> *)otherButtonTitles;
+
+
+- (void)show;
 
 @end

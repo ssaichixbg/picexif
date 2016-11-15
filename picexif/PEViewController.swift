@@ -8,6 +8,20 @@
 
 import UIKit
 
+class PETableViewController: UITableViewController {
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        MobClick.beginLogPageView(NSStringFromClass(self.classForCoder))
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        MobClick.beginLogPageView(NSStringFromClass(self.classForCoder))
+    }
+}
+
 class PEViewController: UIViewController {
 
     override func viewDidLoad() {
