@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>picexif-free.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>13</integer>
+		</dict>
 		<key>picexif.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -13,6 +18,11 @@
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>F439BF441DCAD5080095409A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F485D33D1DD46A7E008B43C4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
