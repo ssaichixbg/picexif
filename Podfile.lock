@@ -6,6 +6,7 @@ PODS:
   - pop (1.0.9)
   - SnapKit (3.0.2)
   - UMengAnalytics-NO-IDFA (4.1.3)
+  - VIMediaCache (0.1)
   - XRCarouselView (2.5.6)
 
 DEPENDENCIES:
@@ -16,6 +17,7 @@ DEPENDENCIES:
   - pop (~> 1.0)
   - SnapKit (~> 3.0.2)
   - UMengAnalytics-NO-IDFA
+  - VIMediaCache
   - XRCarouselView
 
 SPEC CHECKSUMS:
@@ -26,8 +28,9 @@ SPEC CHECKSUMS:
   pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
   SnapKit: 2e456761aa92d4d4067a7a5594c18769d451a8ad
   UMengAnalytics-NO-IDFA: b26a7003458204d4549b6bd132c2f07dd5942b86
+  VIMediaCache: 1f5fec19aa3a818a9a2e47fa2699b422c8530450
   XRCarouselView: 52529f924d26ee4787f9bd958150800b73e60922
 
-PODFILE CHECKSUM: 092d164ba4bdd423ce345941765178b61296d064
+PODFILE CHECKSUM: 1bbcbe3e4aa724d7676936d8e54dac8c4a3c2f36
 
 COCOAPODS: 1.0.0

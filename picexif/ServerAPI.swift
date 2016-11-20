@@ -9,12 +9,13 @@
 import Foundation
 import Alamofire
 
-let hostName = "http://picexif.applinzi.com"
+let hostName = "https://picexif.applinzi.com"
 
 enum ServerAPIUrl: String{
     case hotPOIURL = "/poi/hot"
     case nearPOIURL = "/poi/near"
     case loggingPOIURL = "/poi/logging"
+    case ratingPrompt = "/help/rating"
     
     var fullURL: String {
         return hostName + rawValue

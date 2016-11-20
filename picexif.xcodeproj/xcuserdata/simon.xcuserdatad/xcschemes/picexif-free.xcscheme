@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F485D33D1DD46A7E008B43C4"
-               BuildableName = "picexi-free.app"
-               BlueprintName = "picexi-free"
+               BuildableName = "picexif-free.app"
+               BlueprintName = "picexif-free"
                ReferencedContainer = "container:picexif.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -33,8 +33,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F485D33D1DD46A7E008B43C4"
-            BuildableName = "picexi-free.app"
-            BlueprintName = "picexi-free"
+            BuildableName = "picexif-free.app"
+            BlueprintName = "picexif-free"
             ReferencedContainer = "container:picexif.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -56,8 +56,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F485D33D1DD46A7E008B43C4"
-            BuildableName = "picexi-free.app"
-            BlueprintName = "picexi-free"
+            BuildableName = "picexif-free.app"
+            BlueprintName = "picexif-free"
             ReferencedContainer = "container:picexif.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -75,8 +75,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F485D33D1DD46A7E008B43C4"
-            BuildableName = "picexi-free.app"
-            BlueprintName = "picexi-free"
+            BuildableName = "picexif-free.app"
+            BlueprintName = "picexif-free"
             ReferencedContainer = "container:picexif.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

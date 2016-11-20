@@ -11,3 +11,5 @@
 #import "HJCActionSheet.h"
 
 #import "UMMobClick/MobClick.h"
+
+#import <VIMediaCache/VIMediaCache.h>

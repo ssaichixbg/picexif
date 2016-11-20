@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		092650D80F14780BF2F0F720 /* Pods_picexif_free.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0A2D0EE9E5EEFAAE8B123A4 /* Pods_picexif_free.framework */; };
+		2E3FD1303F48316DD5CADF2F /* Pods_picexif.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FFF4E00E27FDDE03A0BE88B /* Pods_picexif.framework */; };
 		5B58E3E9B6B05A69C03FBD4F /* Pods_picexif.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FFF4E00E27FDDE03A0BE88B /* Pods_picexif.framework */; };
 		F439BF491DCAD5090095409A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F439BF481DCAD5090095409A /* AppDelegate.swift */; };
 		F439BF4B1DCAD5090095409A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F439BF4A1DCAD5090095409A /* HomeViewController.swift */; };
@@ -17,9 +19,13 @@
 		F439BF651DCAD7B60095409A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F439BF641DCAD7B60095409A /* CoreLocation.framework */; };
 		F439BF671DCAD7BE0095409A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F439BF661DCAD7BE0095409A /* SystemConfiguration.framework */; };
 		F439BF691DCAD7C40095409A /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F439BF681DCAD7C40095409A /* libz.tbd */; };
+		F449CAAE1DDB5FF80094F36B /* Storyboard+Shortcut.swift in Sources */ = {isa = PBXBuildFile; fileRef = F449CAAD1DDB5FF80094F36B /* Storyboard+Shortcut.swift */; };
+		F449CAAF1DDB61480094F36B /* Storyboard+Shortcut.swift in Sources */ = {isa = PBXBuildFile; fileRef = F449CAAD1DDB5FF80094F36B /* Storyboard+Shortcut.swift */; };
 		F457CA5C1DD0A1EB00C956E7 /* UMMobClick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F457CA5B1DD0A1EB00C956E7 /* UMMobClick.framework */; };
 		F457CA5E1DD0A21E00C956E7 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F457CA5D1DD0A21E00C956E7 /* libsqlite3.tbd */; };
 		F457CA601DD0A2C500C956E7 /* PEViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F457CA5F1DD0A2C500C956E7 /* PEViewController.swift */; };
+		F472368B1DDAFCF200A93DD5 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F472368A1DDAFCF200A93DD5 /* WebViewController.swift */; };
+		F472368C1DDAFD0A00A93DD5 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F472368A1DDAFCF200A93DD5 /* WebViewController.swift */; };
 		F485D3401DD46A7E008B43C4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F439BF4A1DCAD5090095409A /* HomeViewController.swift */; };
 		F485D3411DD46A7E008B43C4 /* POI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C7AFE51DCCA2C9009A40F6 /* POI.swift */; };
 		F485D3421DD46A7E008B43C4 /* PEViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F457CA5F1DD0A2C500C956E7 /* PEViewController.swift */; };
@@ -46,7 +52,6 @@
 		F485D3581DD46A7E008B43C4 /* UMMobClick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F457CA5B1DD0A1EB00C956E7 /* UMMobClick.framework */; };
 		F485D3591DD46A7E008B43C4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F439BF621DCAD7B10095409A /* QuartzCore.framework */; };
 		F485D35A1DD46A7E008B43C4 /* AMapFoundationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4C7AFDD1DCC6D6D009A40F6 /* AMapFoundationKit.framework */; };
-		F485D35B1DD46A7E008B43C4 /* Pods_picexif.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FFF4E00E27FDDE03A0BE88B /* Pods_picexif.framework */; };
 		F485D35D1DD46A7E008B43C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F439BF511DCAD5090095409A /* LaunchScreen.storyboard */; };
 		F485D35E1DD46A7E008B43C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F439BF4F1DCAD5090095409A /* Assets.xcassets */; };
 		F485D35F1DD46A7E008B43C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F439BF4C1DCAD5090095409A /* Main.storyboard */; };
@@ -71,8 +76,11 @@
 
 /* Begin PBXFileReference section */
 		0FFF4E00E27FDDE03A0BE88B /* Pods_picexif.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_picexif.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		25FFFE63FAE91B060374011F /* Pods-picexif.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-picexif.release.xcconfig"; path = "Pods/Target Support Files/Pods-picexif/Pods-picexif.release.xcconfig"; sourceTree = "<group>"; };
-		BA064605108502F74BA037FC /* Pods-picexif.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-picexif.debug.xcconfig"; path = "Pods/Target Support Files/Pods-picexif/Pods-picexif.debug.xcconfig"; sourceTree = "<group>"; };
+		808BBA4EC1F571245EF91946 /* Pods-picexif-free.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-picexif-free.debug.xcconfig"; path = "Pods/Target Support Files/Pods-picexif-free/Pods-picexif-free.debug.xcconfig"; sourceTree = "<group>"; };
+		880FC2E2067DCE5F619A6F24 /* Pods-picexif.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-picexif.debug.xcconfig"; path = "Pods/Target Support Files/Pods-picexif/Pods-picexif.debug.xcconfig"; sourceTree = "<group>"; };
+		9D03D071BA583F97D22A90D1 /* Pods-picexif.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-picexif.release.xcconfig"; path = "Pods/Target Support Files/Pods-picexif/Pods-picexif.release.xcconfig"; sourceTree = "<group>"; };
+		E520D42A682BC727F53C8FB4 /* Pods-picexif-free.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-picexif-free.release.xcconfig"; path = "Pods/Target Support Files/Pods-picexif-free/Pods-picexif-free.release.xcconfig"; sourceTree = "<group>"; };
+		F0A2D0EE9E5EEFAAE8B123A4 /* Pods_picexif_free.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_picexif_free.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F439BF451DCAD5080095409A /* picexif.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = picexif.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F439BF481DCAD5090095409A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F439BF4A1DCAD5090095409A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -85,10 +93,12 @@
 		F439BF661DCAD7BE0095409A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		F439BF681DCAD7C40095409A /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		F439BF6A1DCAD87F0095409A /* picexif-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "picexif-Bridging-Header.h"; sourceTree = "<group>"; };
+		F449CAAD1DDB5FF80094F36B /* Storyboard+Shortcut.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Storyboard+Shortcut.swift"; sourceTree = "<group>"; };
 		F457CA5B1DD0A1EB00C956E7 /* UMMobClick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UMMobClick.framework; sourceTree = "<group>"; };
 		F457CA5D1DD0A21E00C956E7 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		F457CA5F1DD0A2C500C956E7 /* PEViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PEViewController.swift; sourceTree = "<group>"; };
-		F485D3651DD46A7E008B43C4 /* picexi-free.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "picexi-free.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F472368A1DDAFCF200A93DD5 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		F485D3651DD46A7E008B43C4 /* picexif-free.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "picexif-free.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F485D3661DD46A7F008B43C4 /* picexif copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "picexif copy-Info.plist"; path = "/Users/simon/Dev/mine/picexif/picexif copy-Info.plist"; sourceTree = "<absolute>"; };
 		F4C7AFBD1DCAE865009A40F6 /* Image+Exif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Image+Exif.swift"; sourceTree = "<group>"; };
 		F4C7AFBF1DCAEAD4009A40F6 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
@@ -130,6 +140,7 @@
 				F439BF631DCAD7B10095409A /* QuartzCore.framework in Frameworks */,
 				F4C7AFDE1DCC6D6D009A40F6 /* AMapFoundationKit.framework in Frameworks */,
 				5B58E3E9B6B05A69C03FBD4F /* Pods_picexif.framework in Frameworks */,
+				2E3FD1303F48316DD5CADF2F /* Pods_picexif.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,7 +162,7 @@
 				F485D3581DD46A7E008B43C4 /* UMMobClick.framework in Frameworks */,
 				F485D3591DD46A7E008B43C4 /* QuartzCore.framework in Frameworks */,
 				F485D35A1DD46A7E008B43C4 /* AMapFoundationKit.framework in Frameworks */,
-				F485D35B1DD46A7E008B43C4 /* Pods_picexif.framework in Frameworks */,
+				092650D80F14780BF2F0F720 /* Pods_picexif_free.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,8 +172,10 @@
 		BA7664776885E0A544E77CAC /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				BA064605108502F74BA037FC /* Pods-picexif.debug.xcconfig */,
-				25FFFE63FAE91B060374011F /* Pods-picexif.release.xcconfig */,
+				880FC2E2067DCE5F619A6F24 /* Pods-picexif.debug.xcconfig */,
+				9D03D071BA583F97D22A90D1 /* Pods-picexif.release.xcconfig */,
+				808BBA4EC1F571245EF91946 /* Pods-picexif-free.debug.xcconfig */,
+				E520D42A682BC727F53C8FB4 /* Pods-picexif-free.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -182,7 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				F439BF451DCAD5080095409A /* picexif.app */,
-				F485D3651DD46A7E008B43C4 /* picexi-free.app */,
+				F485D3651DD46A7E008B43C4 /* picexif-free.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -223,6 +236,7 @@
 				F439BF641DCAD7B60095409A /* CoreLocation.framework */,
 				F439BF621DCAD7B10095409A /* QuartzCore.framework */,
 				0FFF4E00E27FDDE03A0BE88B /* Pods_picexif.framework */,
+				F0A2D0EE9E5EEFAAE8B123A4 /* Pods_picexif_free.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -233,6 +247,7 @@
 				F4C7AFEB1DCDAFD7009A40F6 /* UIViewController+Image.swift */,
 				F4C7AFBD1DCAE865009A40F6 /* Image+Exif.swift */,
 				F4C7AFF01DCE26AD009A40F6 /* UIColor+Utils.swift */,
+				F449CAAD1DDB5FF80094F36B /* Storyboard+Shortcut.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -245,6 +260,7 @@
 				F4C7AFE31DCC994B009A40F6 /* HotTableViewController.swift */,
 				F4C7AFED1DCDC616009A40F6 /* ShareViewController.swift */,
 				F457CA5F1DD0A2C500C956E7 /* PEViewController.swift */,
+				F472368A1DDAFCF200A93DD5 /* WebViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -281,24 +297,24 @@
 			productReference = F439BF451DCAD5080095409A /* picexif.app */;
 			productType = "com.apple.product-type.application";
 		};
-		F485D33D1DD46A7E008B43C4 /* picexi-free */ = {
+		F485D33D1DD46A7E008B43C4 /* picexif-free */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F485D3621DD46A7E008B43C4 /* Build configuration list for PBXNativeTarget "picexi-free" */;
+			buildConfigurationList = F485D3621DD46A7E008B43C4 /* Build configuration list for PBXNativeTarget "picexif-free" */;
 			buildPhases = (
-				F485D33E1DD46A7E008B43C4 /* 📦 Check Pods Manifest.lock */,
+				C69AD6F6DACFEB4D14BFA79D /* 📦 Check Pods Manifest.lock */,
 				F485D33F1DD46A7E008B43C4 /* Sources */,
 				F485D34C1DD46A7E008B43C4 /* Frameworks */,
 				F485D35C1DD46A7E008B43C4 /* Resources */,
-				F485D3601DD46A7E008B43C4 /* 📦 Embed Pods Frameworks */,
-				F485D3611DD46A7E008B43C4 /* 📦 Copy Pods Resources */,
+				C09A4A28D743F6B6F3DA63B5 /* 📦 Embed Pods Frameworks */,
+				32FDB19C463D0711F700596B /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "picexi-free";
+			name = "picexif-free";
 			productName = picexif;
-			productReference = F485D3651DD46A7E008B43C4 /* picexi-free.app */;
+			productReference = F485D3651DD46A7E008B43C4 /* picexif-free.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -336,7 +352,7 @@
 			projectRoot = "";
 			targets = (
 				F439BF441DCAD5080095409A /* picexif */,
-				F485D33D1DD46A7E008B43C4 /* picexi-free */,
+				F485D33D1DD46A7E008B43C4 /* picexif-free */,
 			);
 		};
 /* End PBXProject section */
@@ -365,6 +381,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		32FDB19C463D0711F700596B /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-picexif-free/Pods-picexif-free-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		79C7C1551E4D5D6AF26FCEED /* 📦 Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -395,6 +426,36 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-picexif/Pods-picexif-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		C09A4A28D743F6B6F3DA63B5 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-picexif-free/Pods-picexif-free-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C69AD6F6DACFEB4D14BFA79D /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		D028456516E35B9C7C2B1394 /* 📦 Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -410,51 +471,6 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		F485D33E1DD46A7E008B43C4 /* 📦 Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		F485D3601DD46A7E008B43C4 /* 📦 Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-picexif/Pods-picexif-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F485D3611DD46A7E008B43C4 /* 📦 Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-picexif/Pods-picexif-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -468,11 +484,13 @@
 				F4C7AFEC1DCDAFD7009A40F6 /* UIViewController+Image.swift in Sources */,
 				F4C7AFEA1DCDAF52009A40F6 /* StartupViewController.swift in Sources */,
 				F4C7AFF61DCE2BFE009A40F6 /* HJCActionSheet.m in Sources */,
+				F449CAAE1DDB5FF80094F36B /* Storyboard+Shortcut.swift in Sources */,
 				F4C7AFE41DCC994B009A40F6 /* HotTableViewController.swift in Sources */,
 				F4C7AFF11DCE26AD009A40F6 /* UIColor+Utils.swift in Sources */,
 				F439BF491DCAD5090095409A /* AppDelegate.swift in Sources */,
 				F4C7AFEE1DCDC616009A40F6 /* ShareViewController.swift in Sources */,
 				F4C7AFE81DCD942D009A40F6 /* ServerAPI.swift in Sources */,
+				F472368B1DDAFCF200A93DD5 /* WebViewController.swift in Sources */,
 				F4C7AFBE1DCAE865009A40F6 /* Image+Exif.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -481,6 +499,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F449CAAF1DDB61480094F36B /* Storyboard+Shortcut.swift in Sources */,
+				F472368C1DDAFD0A00A93DD5 /* WebViewController.swift in Sources */,
 				F485D3401DD46A7E008B43C4 /* HomeViewController.swift in Sources */,
 				F485D3411DD46A7E008B43C4 /* POI.swift in Sources */,
 				F485D3421DD46A7E008B43C4 /* PEViewController.swift in Sources */,
@@ -613,7 +633,7 @@
 		};
 		F439BF581DCAD5090095409A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BA064605108502F74BA037FC /* Pods-picexif.debug.xcconfig */;
+			baseConfigurationReference = 880FC2E2067DCE5F619A6F24 /* Pods-picexif.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				BUNDLE_IDENTIFIER = "";
@@ -640,7 +660,7 @@
 		};
 		F439BF591DCAD5090095409A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 25FFFE63FAE91B060374011F /* Pods-picexif.release.xcconfig */;
+			baseConfigurationReference = 9D03D071BA583F97D22A90D1 /* Pods-picexif.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				BUNDLE_IDENTIFIER = "";
@@ -666,7 +686,7 @@
 		};
 		F485D3631DD46A7E008B43C4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BA064605108502F74BA037FC /* Pods-picexif.debug.xcconfig */;
+			baseConfigurationReference = 808BBA4EC1F571245EF91946 /* Pods-picexif-free.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				BUNDLE_IDENTIFIER = "";
@@ -694,7 +714,7 @@
 		};
 		F485D3641DD46A7E008B43C4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 25FFFE63FAE91B060374011F /* Pods-picexif.release.xcconfig */;
+			baseConfigurationReference = E520D42A682BC727F53C8FB4 /* Pods-picexif-free.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				BUNDLE_IDENTIFIER = "";
@@ -740,7 +760,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F485D3621DD46A7E008B43C4 /* Build configuration list for PBXNativeTarget "picexi-free" */ = {
+		F485D3621DD46A7E008B43C4 /* Build configuration list for PBXNativeTarget "picexif-free" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F485D3631DD46A7E008B43C4 /* Debug */,
