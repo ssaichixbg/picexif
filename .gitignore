@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 Pods/
 =======
 # Xcode
@@ -38,6 +37,8 @@ xcuserdata/
 # https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
 #
 # Pods/
+Pods/
+picexif.xcworkspace
 
 # Carthage
 #
@@ -64,4 +65,3 @@ fastlane/test_output
 # https://github.com/johnno1962/injectionforxcode
 
 iOSInjectionProject/
->>>>>>> 514c06a29caa92a461f96685184ec00716bd29fa
