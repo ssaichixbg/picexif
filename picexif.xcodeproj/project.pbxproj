@@ -10,6 +10,14 @@
 		092650D80F14780BF2F0F720 /* Pods_picexif_free.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0A2D0EE9E5EEFAAE8B123A4 /* Pods_picexif_free.framework */; };
 		2E3FD1303F48316DD5CADF2F /* Pods_picexif.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FFF4E00E27FDDE03A0BE88B /* Pods_picexif.framework */; };
 		5B58E3E9B6B05A69C03FBD4F /* Pods_picexif.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FFF4E00E27FDDE03A0BE88B /* Pods_picexif.framework */; };
+		F422CAE61DE8492000D1BA27 /* POITemplates.swift in Sources */ = {isa = PBXBuildFile; fileRef = F422CAE51DE8492000D1BA27 /* POITemplates.swift */; };
+		F422CAE71DE8492000D1BA27 /* POITemplates.swift in Sources */ = {isa = PBXBuildFile; fileRef = F422CAE51DE8492000D1BA27 /* POITemplates.swift */; };
+		F422CAE91DEB11C400D1BA27 /* POITemplateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F422CAE81DEB11C400D1BA27 /* POITemplateViewController.swift */; };
+		F422CAEA1DEB11C400D1BA27 /* POITemplateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F422CAE81DEB11C400D1BA27 /* POITemplateViewController.swift */; };
+		F43965D11DE32AC400989DE8 /* SwiftTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43965D01DE32AC400989DE8 /* SwiftTimer.swift */; };
+		F43965D21DE32AD800989DE8 /* SwiftTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43965D01DE32AC400989DE8 /* SwiftTimer.swift */; };
+		F43965D41DE3413C00989DE8 /* UITableView+Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43965D31DE3413C00989DE8 /* UITableView+Loading.swift */; };
+		F43965D51DE3413C00989DE8 /* UITableView+Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43965D31DE3413C00989DE8 /* UITableView+Loading.swift */; };
 		F439BF491DCAD5090095409A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F439BF481DCAD5090095409A /* AppDelegate.swift */; };
 		F439BF4B1DCAD5090095409A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F439BF4A1DCAD5090095409A /* HomeViewController.swift */; };
 		F439BF4E1DCAD5090095409A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F439BF4C1DCAD5090095409A /* Main.storyboard */; };
@@ -81,6 +89,11 @@
 		9D03D071BA583F97D22A90D1 /* Pods-picexif.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-picexif.release.xcconfig"; path = "Pods/Target Support Files/Pods-picexif/Pods-picexif.release.xcconfig"; sourceTree = "<group>"; };
 		E520D42A682BC727F53C8FB4 /* Pods-picexif-free.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-picexif-free.release.xcconfig"; path = "Pods/Target Support Files/Pods-picexif-free/Pods-picexif-free.release.xcconfig"; sourceTree = "<group>"; };
 		F0A2D0EE9E5EEFAAE8B123A4 /* Pods_picexif_free.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_picexif_free.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F422CAE51DE8492000D1BA27 /* POITemplates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = POITemplates.swift; sourceTree = "<group>"; };
+		F422CAE81DEB11C400D1BA27 /* POITemplateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = POITemplateViewController.swift; sourceTree = "<group>"; };
+		F422CAEC1DEB11EE00D1BA27 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		F43965D01DE32AC400989DE8 /* SwiftTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftTimer.swift; sourceTree = "<group>"; };
+		F43965D31DE3413C00989DE8 /* UITableView+Loading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Loading.swift"; sourceTree = "<group>"; };
 		F439BF451DCAD5080095409A /* picexif.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = picexif.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F439BF481DCAD5090095409A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F439BF4A1DCAD5090095409A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -214,6 +227,7 @@
 				F439BF4F1DCAD5090095409A /* Assets.xcassets */,
 				F439BF541DCAD5090095409A /* Info.plist */,
 				F439BF6A1DCAD87F0095409A /* picexif-Bridging-Header.h */,
+				F422CAE51DE8492000D1BA27 /* POITemplates.swift */,
 			);
 			path = picexif;
 			sourceTree = "<group>";
@@ -248,6 +262,7 @@
 				F4C7AFBD1DCAE865009A40F6 /* Image+Exif.swift */,
 				F4C7AFF01DCE26AD009A40F6 /* UIColor+Utils.swift */,
 				F449CAAD1DDB5FF80094F36B /* Storyboard+Shortcut.swift */,
+				F43965D31DE3413C00989DE8 /* UITableView+Loading.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -261,6 +276,7 @@
 				F4C7AFED1DCDC616009A40F6 /* ShareViewController.swift */,
 				F457CA5F1DD0A2C500C956E7 /* PEViewController.swift */,
 				F472368A1DDAFCF200A93DD5 /* WebViewController.swift */,
+				F422CAE81DEB11C400D1BA27 /* POITemplateViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -270,6 +286,7 @@
 			children = (
 				F4C7AFF41DCE2BFE009A40F6 /* HJCActionSheet.h */,
 				F4C7AFF51DCE2BFE009A40F6 /* HJCActionSheet.m */,
+				F43965D01DE32AC400989DE8 /* SwiftTimer.swift */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -479,6 +496,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F439BF4B1DCAD5090095409A /* HomeViewController.swift in Sources */,
+				F43965D11DE32AC400989DE8 /* SwiftTimer.swift in Sources */,
 				F4C7AFE61DCCA2C9009A40F6 /* POI.swift in Sources */,
 				F457CA601DD0A2C500C956E7 /* PEViewController.swift in Sources */,
 				F4C7AFEC1DCDAFD7009A40F6 /* UIViewController+Image.swift in Sources */,
@@ -491,7 +509,10 @@
 				F4C7AFEE1DCDC616009A40F6 /* ShareViewController.swift in Sources */,
 				F4C7AFE81DCD942D009A40F6 /* ServerAPI.swift in Sources */,
 				F472368B1DDAFCF200A93DD5 /* WebViewController.swift in Sources */,
+				F43965D41DE3413C00989DE8 /* UITableView+Loading.swift in Sources */,
+				F422CAE91DEB11C400D1BA27 /* POITemplateViewController.swift in Sources */,
 				F4C7AFBE1DCAE865009A40F6 /* Image+Exif.swift in Sources */,
+				F422CAE61DE8492000D1BA27 /* POITemplates.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -499,6 +520,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F43965D21DE32AD800989DE8 /* SwiftTimer.swift in Sources */,
 				F449CAAF1DDB61480094F36B /* Storyboard+Shortcut.swift in Sources */,
 				F472368C1DDAFD0A00A93DD5 /* WebViewController.swift in Sources */,
 				F485D3401DD46A7E008B43C4 /* HomeViewController.swift in Sources */,
@@ -512,7 +534,10 @@
 				F485D3481DD46A7E008B43C4 /* AppDelegate.swift in Sources */,
 				F485D3491DD46A7E008B43C4 /* ShareViewController.swift in Sources */,
 				F485D34A1DD46A7E008B43C4 /* ServerAPI.swift in Sources */,
+				F43965D51DE3413C00989DE8 /* UITableView+Loading.swift in Sources */,
+				F422CAEA1DEB11C400D1BA27 /* POITemplateViewController.swift in Sources */,
 				F485D34B1DD46A7E008B43C4 /* Image+Exif.swift in Sources */,
+				F422CAE71DE8492000D1BA27 /* POITemplates.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -523,6 +548,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				F439BF4D1DCAD5090095409A /* Base */,
+				F422CAEC1DEB11EE00D1BA27 /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

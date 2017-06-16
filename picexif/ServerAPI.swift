@@ -15,7 +15,10 @@ enum ServerAPIUrl: String{
     case hotPOIURL = "/poi/hot"
     case nearPOIURL = "/poi/near"
     case loggingPOIURL = "/poi/logging"
-    case ratingPrompt = "/help/rating"
+    case searchPOIURL = "/poi/search"
+    case ratingPromptURL = "/help/rating"
+    case poiTemplatesURL = "/poi/templates"
+    
     
     var fullURL: String {
         return hostName + rawValue
@@ -23,8 +26,12 @@ enum ServerAPIUrl: String{
 }
 
 class ServerAPI: NSObject {
-    static func requestString(_ url: ServerAPIUrl, params: [String: Any]? = nil,block: @escaping (Bool, String)->()) {
-        Alamofire.request(url.fullURL, parameters: params)
+    static var appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "1.2"
+    
+    static func requestString(_ url: ServerAPIUrl, params: [String: Any]? = nil,block: @escaping (Bool, String)->()) -> DataRequest {
+        var newParams = params ?? [String: Any]()
+        newParams["v"] = appVersion
+        return Alamofire.request(url.fullURL, parameters: newParams)
             .validate()
             .responseString { response in
                 switch response.result {
@@ -43,7 +50,7 @@ class ServerAPI: NSObject {
     
     static func reqeustJSONDict(_ url: ServerAPIUrl, params: [String: Any]? = nil,block: @escaping (Bool, [String: Any])->()) {
         var newParams = params ?? [String: Any]()
-        newParams["v"] = "1.1"
+        newParams["v"] = appVersion
         Alamofire.request(url.fullURL, parameters: newParams)
             .validate()
             .responseJSON { response in
@@ -62,7 +69,9 @@ class ServerAPI: NSObject {
     }
     
     static func jsonRequest(_ url: ServerAPIUrl, params: [String: Any]? = nil) {
-        Alamofire.request(url.fullURL, method: .post, parameters: params, encoding: JSONEncoding.default).response { (DefaultDataResponse) in
+        var newParams = params ?? [String: Any]()
+        newParams["v"] = appVersion
+        Alamofire.request(url.fullURL, method: .post, parameters: newParams, encoding: JSONEncoding.default).response { (DefaultDataResponse) in
             
         }
     }

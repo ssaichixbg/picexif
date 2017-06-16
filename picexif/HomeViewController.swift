@@ -27,12 +27,23 @@ class HomeSearchResultTableViewController: PEViewController {
     var result: [POI]? {
         didSet {
             if let _ = result {
-                tableView.reloadData()
                 tableView.isHidden = false
             }
             else {
-                tableView.isHidden = true
+                tableView.isHidden = POIResult == nil ? true : false
             }
+            tableView.reloadSections(IndexSet(integer: 1), with: .fade)
+        }
+    }
+    var POIResult: [POI]? {
+        didSet {
+            if let _ = POIResult {
+                tableView.isHidden = false
+            }
+            else {
+                tableView.isHidden = result == nil ? true : false
+            }
+            tableView.reloadSections(IndexSet(integer: 0), with: .fade)
         }
     }
     var searchKeyword: String?
@@ -68,16 +79,23 @@ extension HomeSearchResultTableViewController: UISearchResultsUpdating, UITableV
     func updateSearchResults(for searchController: UISearchController) {
         if let text = searchController.searchBar.text, text.characters.count > 1 {
             searchKeyword = text
+            tableView.startLoading()
             searcher.requestMKSearch(centerPos: nil, searchQuery: text, done: {[weak self](pois) in
-              self?.result = pois
+                self?.result = pois
+                self?.tableView.stopLoading()
+            })
+            searcher.requestPOISearch(searchQuery: text, done: {[weak self](pois) in
+                self?.POIResult = pois
+                self?.tableView.stopLoading()
             })
         }
         else {
             result = nil
+            POIResult = nil
         }
     }
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return 2
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -85,7 +103,12 @@ extension HomeSearchResultTableViewController: UISearchResultsUpdating, UITableV
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return (result?.count) ?? 0
+        if section == 1 {
+            return (result?.count) ?? 0
+        }
+        else {
+            return (POIResult?.count) ?? 0
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -93,6 +116,8 @@ extension HomeSearchResultTableViewController: UISearchResultsUpdating, UITableV
         if cell == nil {
             cell = UITableViewCell(style: .subtitle, reuseIdentifier: "location")
         }
+        
+        let r = indexPath.section == 0 ? POIResult : result
         
         let textAttr = [
             NSForegroundColorAttributeName: UIColor.black,
@@ -111,9 +136,9 @@ extension HomeSearchResultTableViewController: UISearchResultsUpdating, UITableV
             NSFontAttributeName: UIFont.systemFont(ofSize: 14)
             ] as [String : AnyObject]
         
-        let plainText = result![indexPath.row].name ?? ""
+        let plainText = r?[indexPath.row].name ?? ""
         let text: NSMutableAttributedString = NSMutableAttributedString(string:  plainText, attributes: textAttr)
-        let plainDetailText = result![indexPath.row].name ?? ""
+        let plainDetailText = r?[indexPath.row].address ?? ""
         let detailText: NSMutableAttributedString = NSMutableAttributedString(string: plainDetailText, attributes: detailTextAttr)
         text.setAttributes(textHighlightAttr, range: (plainText as NSString).range(of: searchKeyword ?? ""))
         detailText.setAttributes(detailHighlightTextAttr, range: (plainDetailText as NSString).range(of: searchKeyword ?? ""))
@@ -123,8 +148,9 @@ extension HomeSearchResultTableViewController: UISearchResultsUpdating, UITableV
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let result = result {
-            didSelectPOI?(result[indexPath.row])
+        let r = indexPath.section == 0 ? POIResult : result
+        if let r = r {
+            didSelectPOI?(r[indexPath.row])
         }
     }
 }
@@ -244,10 +270,12 @@ class HomeViewController: PEViewController {
     }
     
     func requestPOI() {
+        locationTableView.startLoading()
         searcher.requestAmapSearch(centerPos: centerPos,
                                    done: { [weak self](pois) in
                         self?.locationList = pois
                         self?.locationTableView.reloadData()
+                        self?.locationTableView.stopLoading()
         })
     }
     

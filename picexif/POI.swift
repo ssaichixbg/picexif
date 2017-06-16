@@ -9,6 +9,7 @@
 import UIKit
 import MapKit
 import HandyJSON
+import Alamofire
 
 class POISearcher: NSObject {
     var callback: (([POI])->())?
@@ -17,16 +18,27 @@ class POISearcher: NSObject {
 
     var mkSearch: MKLocalSearch!
     
+    var FQRequest: DataRequest!
+    var POIRequest: DataRequest!
+    var POIReqeustDelayTimer: SwiftTimer?
+    
     override init() {
         
     }
     
     func requestFQSearch(centerPos: CLLocationCoordinate2D, done: @escaping ([POI])->()) {
-        ServerAPI.requestString(.nearPOIURL,
+        if let FQRequest = FQRequest {
+            FQRequest.cancel()
+            self.FQRequest = nil
+        }
+        
+        FQRequest = ServerAPI.requestString(.nearPOIURL,
                                 params: [
                                     "ll":"\(centerPos.latitude),\(centerPos.longitude)"
             ], block: {
-                (success, result) in
+                [weak self](success, result) in
+                self?.FQRequest = nil
+                
                 if (success) {
                     var list = [POI]()
                     let jsonList = JSONDeserializer<POI>.deserializeModelArrayFrom(json: result) ?? []
@@ -75,6 +87,45 @@ class POISearcher: NSObject {
             done([])
         }
     }
+    
+    func requestPOISearch(searchQuery: String?, done: @escaping ([POI])->()) {
+        guard let searchQuery = searchQuery, searchQuery.characters.count > 0 else {
+            done([])
+            return
+        }
+        
+        if let POIRequest = POIRequest {
+            POIRequest.cancel()
+            self.POIRequest = nil
+        }
+        
+//        if let POIReqeustDelayTimer = POIReqeustDelayTimer {
+//            POIReqeustDelayTimer.suspend()
+//        }
+        
+//        POIReqeustDelayTimer = SwiftTimer(interval: .milliseconds(300),
+//                                          handler: { [weak self](timer) in
+//                                            
+//                                            })
+//        })
+//        
+//        POIReqeustDelayTimer?.start()
+        POIRequest = ServerAPI.requestString(.searchPOIURL,
+                                                   params: ["k": searchQuery],
+                                                   block: {
+                                                    [weak self](suc, response) in
+                                                    self?.POIRequest = nil
+                                                    
+                                                    let result = JSONDeserializer<POI>.deserializeModelArrayFrom(json: response)
+                                                    guard let r = result else {
+                                                        done([])
+                                                        return
+                                                    }
+                                                    let poiList = r.filter({$0 != nil}).map({$0!})
+                                                    done(poiList)
+        })
+    }
+
 }
 
 extension POISearcher: AMapSearchDelegate {
@@ -140,7 +191,7 @@ class POI: HandyJSON{
         address = mkItem.placemark.title
     }
     
-    static func hotList(onSuccess: @escaping ([String: [POI]])->(), onError: @escaping (String)->()) -> [String: [POI]] {
+    static func hotList(onSuccess: @escaping ([String: [POI]])->(), onError: @escaping (String)->())  {
         ServerAPI.reqeustJSONDict(.hotPOIURL,
                                    block: { (success, result) in
                                     if success {
@@ -152,7 +203,7 @@ class POI: HandyJSON{
                                         }
                                         
                                         for key in result.keys {
-                                            var list = result[key]
+                                            let list = result[key]
                                             dict[key] = [POI]()
                                             for item in list! {
                                                 if let item = item as? NSDictionary {
@@ -167,7 +218,5 @@ class POI: HandyJSON{
                                         onError("网络错误，请稍后重试😂")
                                     }
         })
-        
-        return [String: [POI]]()
     }
 }

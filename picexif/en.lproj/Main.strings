@@ -1,0 +1,48 @@
+
+/* Class = "UILabel"; text = "来不及解释了 赶紧上车"; ObjectID = "BYB-0Q-blz"; */
+"BYB-0Q-blz.text" = "来不及解释了 赶紧上车";
+
+/* Class = "UILabel"; text = "Detail"; ObjectID = "BsN-cb-IHP"; */
+"BsN-cb-IHP.text" = "Detail";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "HzR-5T-Uu2"; */
+"HzR-5T-Uu2.text" = "Title";
+
+/* Class = "UILabel"; text = "快把照片发送到："; ObjectID = "KoS-Tg-rN4"; */
+"KoS-Tg-rN4.text" = "快把照片发送到：";
+
+/* Class = "UINavigationItem"; title = "热门位置"; ObjectID = "S9A-Ta-5h6"; */
+"S9A-Ta-5h6.title" = "热门位置";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "Sx5-9q-QhN"; */
+"Sx5-9q-QhN.text" = "Title";
+
+/* Class = "UILabel"; text = "热门位置"; ObjectID = "U4N-OW-088"; */
+"U4N-OW-088.text" = "热门位置";
+
+/* Class = "UINavigationItem"; title = "选择照片"; ObjectID = "UoV-qW-bhr"; */
+"UoV-qW-bhr.title" = "选择照片";
+
+/* Class = "UIButton"; normalTitle = "再来一张"; ObjectID = "c0E-Ea-fYr"; */
+"c0E-Ea-fYr.normalTitle" = "再来一张";
+
+/* Class = "UIButton"; normalTitle = "保存"; ObjectID = "cd6-fZ-g5J"; */
+"cd6-fZ-g5J.normalTitle" = "保存";
+
+/* Class = "UILabel"; text = " "; ObjectID = "fCl-04-43c"; */
+"fCl-04-43c.text" = " ";
+
+/* Class = "UINavigationItem"; title = "修改定位"; ObjectID = "pPS-qw-ypd"; */
+"pPS-qw-ypd.title" = "修改定位";
+
+/* Class = "UIButton"; normalTitle = "朋友圈无法识别定位？"; ObjectID = "sct-9A-QHP"; */
+"sct-9A-QHP.normalTitle" = "朋友圈无法识别定位？";
+
+/* Class = "UILabel"; text = "Detail"; ObjectID = "xlV-Xa-3Ll"; */
+"xlV-Xa-3Ll.text" = "Detail";
+
+/* Class = "UIButton"; normalTitle = "更换照片"; ObjectID = "y8g-oL-UYM"; */
+"y8g-oL-UYM.normalTitle" = "更换照片";
+
+/* Class = "UIButton"; normalTitle = "选择一张照片"; ObjectID = "z4t-wm-szl"; */
+"z4t-wm-szl.normalTitle" = "选择一张照片";
